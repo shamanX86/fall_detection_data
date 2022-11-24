@@ -9,7 +9,7 @@
 <body class="font-sans">
 	<p class="text-xl p-8">Dataset for the project Fall Detection using Compressed ML Algorithm</p>
 
-	<div class="m-2 p-1 border-2 border-black inline-block cursor-pointer hidden" id="back">Back</div>
+	<div class="m-2 p-1 border-2 border-black inline-block cursor-pointer hidden" id="back" onclick="back()">Back</div>
 
 	<div id="opt1">
 		<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer" onclick="opt1(1)">Data with Heart Rate Readings</div>
@@ -82,22 +82,22 @@
 			<div class="table-row">
 				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl1"><a>ADL 01</a></div>
 				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl2"><a>ADL 02</a></div>
-				<div class="table-cell" id="adl3"><a>ADL 03</a></div>
-				<div class="table-cell" id="adl4"><a>ADL 04</a></div>
-				<div class="table-cell" id="adl5"><a>ADL 05</a></div>
-				<div class="table-cell" id="adl6"><a>ADL 06</a></div>
-				<div class="table-cell" id="adl7"><a>ADL 07</a></div>
-				<div class="table-cell" id="adl8"><a>ADL 08</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl3"><a>ADL 03</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl4"><a>ADL 04</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl5"><a>ADL 05</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl6"><a>ADL 06</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl7"><a>ADL 07</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl8"><a>ADL 08</a></div>
 			</div>
 			<div class="table-row">
-				<div class="table-cell" id="adl9"><a>ADL 09</a></div>
-				<div class="table-cell" id="adl10"><a>ADL 10</a></div>
-				<div class="table-cell" id="adl11"><a>ADL 11</a></div>
-				<div class="table-cell" id="adl12"><a>ADL 12</a></div>
-				<div class="table-cell" id="adl13"><a>ADL 13</a></div>
-				<div class="table-cell" id="adl14"><a>ADL 14</a></div>
-				<div class="table-cell" id="adl15"><a>ADL 15</a></div>
-				<div class="table-cell" id="adl16"><a>ADL 16</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl9"><a>ADL 09</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl10"><a>ADL 10</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl11"><a>ADL 11</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl12"><a>ADL 12</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl13"><a>ADL 13</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl14"><a>ADL 14</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl15"><a>ADL 15</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="adl16"><a>ADL 16</a></div>
 			</div>
 		</div>
 	</div>
@@ -105,34 +105,26 @@
 	<div id="opt5" class="hidden table">
 		<div class="table-row-group">
 			<div class="table-row">
-				<div class="table-cell" id="fall1"><a>Fall 01</a></div>
-				<div class="table-cell" id="fall2"><a>Fall 02</a></div>
-				<div class="table-cell" id="fall3"><a>Fall 03</a></div>
-				<div class="table-cell" id="fall4"><a>Fall 04</a></div>
-				<div class="table-cell" id="fall5"><a>Fall 05</a></div>
-				<div class="table-cell" id="fall6"><a>Fall 06</a></div>
-				<div class="table-cell" id="fall7"><a>Fall 07</a></div>
-				<div class="table-cell" id="fall8"><a>Fall 08</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall1"><a>Fall 01</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall2"><a>Fall 02</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall3"><a>Fall 03</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall4"><a>Fall 04</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall5"><a>Fall 05</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall6"><a>Fall 06</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall7"><a>Fall 07</a></div>
+				<div class="table-cell m-2 p-1 inline-block border-2 border-black cursor-pointer" id="fall8"><a>Fall 08</a></div>
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-		//let baselink = "https://shamanx86.github.io/fall_detection_data/";
-		let baselink = "http://localhost:8080/";
+		let baselink = "https://shamanx86.github.io/fall_detection_data/";
+		// let baselink = "http://localhost:8080/";
 
 		let heart = 1;
 		let activity = 1;
 		let user = 1;
-		let visible = 1;
-
-		// function back(){
-		// 	switch(visible){
-		// 		case 4:
-		// 		visible = 3;
-		// 		document.querySelector("#")
-		// 	}
-		// }
+		let visState = [1,0,0,0,0,0];
 
 		function visibility(arr){
 			arr[0] ? document.querySelector("#opt1").classList.remove("hidden") : document.querySelector("#opt1").classList.add("hidden");
@@ -141,24 +133,32 @@
 			arr[3] ? document.querySelector("#opt4").classList.remove("hidden") : document.querySelector("#opt4").classList.add("hidden");
 			arr[4] ? document.querySelector("#opt5").classList.remove("hidden") : document.querySelector("#opt5").classList.add("hidden");
 			arr[5] ? document.querySelector("#back").classList.remove("hidden") : document.querySelector("#back").classList.add("hidden");
+			visState = arr;
+		}
+
+		function back(){
+			let n = visState.findIndex((x) => x === 1);
+			
+			if(n == 4){
+				visState[n] = 0;
+				n = 3;
+			}
+			visState[n] = 0;
+			visState[n-1] = 1;
+			visState[5] = n !== 1;
+			
+			visibility(visState);
 		}
 
 		function opt1(n){
 			heart = n;
-			// document.querySelector("#back").classList.toggle("hidden");
-			// document.querySelector("#opt1").classList.toggle("hidden");
-			// document.querySelector("#opt2").classList.toggle("hidden");
 			visibility([0,1,0,0,0,1]);
 		}
 
 		function opt2(n){
 			activity = n;
-			// document.querySelector("#opt2").classList.toggle("hidden");
-			// document.querySelector("#opt3").classList.toggle("hidden");
 			visibility([0,0,1,0,0,1]);
 		}
-
-		// https://shamanx86.github.io/fall_detection_data/Dataset/adl/user1/user1_adl1.csv
 
 		function opt3(n){
 			user = n;
@@ -167,12 +167,12 @@
 			if(activity === 1){
 				visibility([0,0,0,1,0,1]);
 				for(let x = 1; x <= 16; x++){
-					document.querySelector(`adl${x}`).firstChild.href = `${baselink}${hrt_link}/adl/user${user}/user${user}_adl${x}`;
+					document.querySelector(`#adl${x}`).firstChild.href = `${baselink}${hrt_link}/adl/user${user}/user${user}_adl${x}.csv`;
 				}
 			} else {
 				visibility([0,0,0,0,1,1]);
 				for(let x = 1; x <= 8; x++){
-					document.querySelector(`fall${x}`).firstChild.href = `${baselink}${hrt_link}/fall/user${user}/user${user}_fall${x}`;
+					document.querySelector(`#fall${x}`).firstChild.href = `${baselink}${hrt_link}/fall/user${user}/user${user}_fall${x}.csv`;
 				}
 			}
 		}
