@@ -1,0 +1,1 @@
+## This repository contains the dataset for the project Fall Detection using Compressed ML algorithm
