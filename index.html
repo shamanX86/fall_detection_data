@@ -29,7 +29,7 @@
 		<a href="fall.zip">
 			<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300">Fall</div>
 		</a>
-		<a href="full_dataset.7z">
+		<a href="full_dataset.zip">
 			<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300">Complete</div>
 		</a>
 	</div>
@@ -153,15 +153,19 @@
 		function back(){
 			let n = visState.findIndex((x) => x === 1);
 			
-			if(n == 4 || n == 5){
+			if(n == 4){
 				visState[n] = 0;
 				n = 3;
 			}
 
-			visState[n] = 0;
-			visState[n-1] = 1;
-			visState[6] = n !== 1;
-			
+			if(n == 5){
+				visState = [1,0,0,0,0,0,0];
+			}
+			else {
+				visState[n] = 0;
+				visState[n-1] = 1;
+				visState[6] = n !== 1;
+			}
 			visibility(visState);
 		}
 
