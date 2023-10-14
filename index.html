@@ -14,11 +14,24 @@
 	<div id="opt1">
 		<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300" onclick="opt1(1)">Data with Heart Rate Readings</div>
 		<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300" onclick="opt1(0)">Data without Heart Rate Readings</div>
+		<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300" onclick="opt6(1)">Full Dataset</div>
 	</div>
 
 	<div id="opt2" class="hidden">
 		<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300" onclick="opt2(1)">ADL</div>
 		<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300" onclick="opt2(0)">Fall</div>
+	</div>
+
+	<div id="opt6" class="hidden">
+		<a href="adl.zip">
+			<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300">ADL</div>
+		</a>
+		<a href="fall.zip">
+			<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300">Fall</div>
+		</a>
+		<a href="full_dataset.zip">
+			<div class="m-2 p-1 inline-block border-2 border-black cursor-pointer hover:bg-sky-300">Complete</div>
+		</a>
 	</div>
 
 	<div id="opt3" class="hidden table m-2">
@@ -124,7 +137,7 @@
 		let heart = 1;
 		let activity = 1;
 		let user = 1;
-		let visState = [1,0,0,0,0,0];
+		let visState = [1,0,0,0,0,0,0];
 
 		function visibility(arr){
 			arr[0] ? document.querySelector("#opt1").classList.remove("hidden") : document.querySelector("#opt1").classList.add("hidden");
@@ -132,32 +145,38 @@
 			arr[2] ? document.querySelector("#opt3").classList.remove("hidden") : document.querySelector("#opt3").classList.add("hidden");
 			arr[3] ? document.querySelector("#opt4").classList.remove("hidden") : document.querySelector("#opt4").classList.add("hidden");
 			arr[4] ? document.querySelector("#opt5").classList.remove("hidden") : document.querySelector("#opt5").classList.add("hidden");
-			arr[5] ? document.querySelector("#back").classList.remove("hidden") : document.querySelector("#back").classList.add("hidden");
+			arr[5] ? document.querySelector("#opt6").classList.remove("hidden") : document.querySelector("#opt6").classList.add("hidden");
+			arr[6] ? document.querySelector("#back").classList.remove("hidden") : document.querySelector("#back").classList.add("hidden");
 			visState = arr;
 		}
 
 		function back(){
 			let n = visState.findIndex((x) => x === 1);
 			
-			if(n == 4){
+			if(n == 4 || n == 5){
 				visState[n] = 0;
 				n = 3;
 			}
+
 			visState[n] = 0;
 			visState[n-1] = 1;
-			visState[5] = n !== 1;
+			visState[6] = n !== 1;
 			
 			visibility(visState);
 		}
 
 		function opt1(n){
 			heart = n;
-			visibility([0,1,0,0,0,1]);
+			visibility([0,1,0,0,0,0,1]);
 		}
 
 		function opt2(n){
 			activity = n;
-			visibility([0,0,1,0,0,1]);
+			visibility([0,0,1,0,0,0,1]);
+		}
+
+		function opt6(n) {
+			visibility([0,0,0,0,0,1,1]);
 		}
 
 		function opt3(n){
@@ -165,12 +184,12 @@
 			let hrt_link = heart ? "Dataset" : "Dataset_no_heart";
 
 			if(activity === 1){
-				visibility([0,0,0,1,0,1]);
+				visibility([0,0,0,1,0,0,1]);
 				for(let x = 1; x <= 16; x++){
 					document.querySelector(`#adl${x}`).firstChild.href = `${baselink}${hrt_link}/adl/user${user}/user${user}_adl${x}.csv`;
 				}
 			} else {
-				visibility([0,0,0,0,1,1]);
+				visibility([0,0,0,0,1,0,1]);
 				for(let x = 1; x <= 8; x++){
 					document.querySelector(`#fall${x}`).firstChild.href = `${baselink}${hrt_link}/fall/user${user}/user${user}_fall${x}.csv`;
 				}
